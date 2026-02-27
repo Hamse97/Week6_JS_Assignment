@@ -46,6 +46,8 @@ const movies = [
   
   // ✍️ Solve it here ✍️
   
+  const movieList = movies.map(movie => `${movie.title} - Rating: ${movie.rating}/10`);
+  console.log(movieList);
   
   /*
   Task 2: Find Highly Rated Movies 🌟 (`.filter`)
@@ -68,4 +70,23 @@ const movies = [
   // ✍️ Solve it here ✍️
 
 
- 
+ const highlyRatedMovies = movies.filter(movie => movie.rating >= 8.0);
+ console.log(highlyRatedMovies);
+  
+  /*
+  Task 3: Check for Rented Movies ✅ (`.some`)
+  
+  Your team wants to know if there are any movies currently rented out.
+  
+  Steps:
+  1. Use `.some` to check if at least one movie has `rented` set to `true`.
+  2. Log the result (true or false).
+  
+  Expected Output:
+  true
+  */
+  
+  // ✍️ Solve it here ✍️
+  
+ const hasRentedMovies = movies.some(movie => movie.rented);
+ console.log(hasRentedMovies);
